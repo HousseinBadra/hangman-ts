@@ -1,0 +1,170 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-width:100vw;
+  min-height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.App{
+  width:min(100vw , 800px);
+  height:min(100vh , 600px);
+  display:grid;
+  grid-template-rows: 6fr 1fr 3fr;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.keyboard{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(9,1fr);
+  gap:.5em;
+  padding:.5em;
+
+}
+
+.letter{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.wrong{
+  background-color: rgb(255, 0, 0);
+}
+
+.right{
+  background-color: rgb(0, 255, 0);
+}
+
+.highlighted{
+  background-color: rgb(0, 100, 255);
+}
+
+.displayletter{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding:.5em;
+  gap:.5em
+  
+}
+
+.letterbox{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-bottom:2px solid black;
+  width:7%;
+  height:100%;
+  font-size:150%
+}
+
+.hangman{
+
+  position:relative;
+}
+
+.hang-1{
+  position:absolute;
+  width:50%;
+  height:2px;
+  left:10%;
+  bottom:0;
+  background:#000
+}
+
+.hang-2{
+  position:absolute;
+  width:2px;
+  height:80%;
+  left:25%;
+  bottom:0;
+  background:#000
+}
+
+.hang-3{
+  position:absolute;
+  width:17.5%;
+  height:2px;
+  left:25%;
+  bottom:80%;
+  background:#000
+}
+
+.hang-4{
+  position:absolute;
+  width:2px;
+  height:calc(16% + 2px);
+  left:42.5%;
+  bottom:64%;
+  background:#000;
+}
+
+.human-1{
+  position:absolute;
+  width:8vh;
+  height:8vh;
+  left:calc(42.5% - 4vh);
+  bottom:calc(64% - 8vh);
+  border-radius:50%;
+  border:2px solid black;
+}
+
+.human-2{
+  position:absolute;
+  width:2px;
+  height:24%;
+  left:42.5%;
+  bottom:calc(64% - 8vh - 24%);
+  background:#000;
+}
+.human-3{
+  position:absolute;
+  width:2px;
+  height:12%;
+  left:42.5%;
+  bottom:calc(64% - 8vh - 16%);
+  background:rgb(0, 0, 0);
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+.human-4{
+  position:absolute;
+  width:2px;
+  height:12%;
+  left:42.5%;
+  bottom:calc(64% - 8vh - 16%);
+  background:#000;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+}
+.human-5{
+  position:absolute;
+  width:2px;
+  height:12%;
+  left:42.5%;
+  bottom:calc(64% - 8vh - 30%);
+  background:rgb(0, 0, 0);
+  transform: rotate(45deg); 
+  transform-origin: top left;
+}
+.human-6{
+  position:absolute;
+  width:2px;
+  height:12%;
+  left:42.5%;
+  bottom:calc(64% - 8vh - 30%);
+  background:#000;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+}
